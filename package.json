@@ -2,11 +2,12 @@
   "name": "yeahhub-monorepo",
   "private": true,
   "scripts": {
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
     "build": "turbo run build",
     "clean": "pnpm -r exec rm -rf node_modules dist"
   },
   "devDependencies": {
+    "@types/node": "^26.3.0",
     "turbo": "^2.5.0",
     "typescript": "^5.8.0"
   },

@@ -17,7 +17,7 @@
     "noFallthroughCasesInSwitch": true,
     "moduleDetection": "force",
     "verbatimModuleSyntax": true,
-    "baseUrl": ".",
+    "types": ["node"],
     "paths": {
       "@/*": ["./packages/*/src"],
       "@shared/*": ["./shared/*"]
