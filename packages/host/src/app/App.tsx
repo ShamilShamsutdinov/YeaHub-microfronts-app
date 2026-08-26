@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { MainLayout } from './layouts/MainLayout'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { MainLayout } from './layouts/MainLayout';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route path="/auth" element={<div>Страница авторизации</div>} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

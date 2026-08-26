@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+.turbo/
+.pnpm-store/
+*.log
+coverage/
+package-lock.json
+pnpm-lock.yaml

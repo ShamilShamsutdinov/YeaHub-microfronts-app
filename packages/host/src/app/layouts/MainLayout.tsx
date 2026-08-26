@@ -1,8 +1,6 @@
-import { Footer } from '@/widgets/Footer/Footer'
-import { Header } from '@/widgets/Header/Header'
-import { Outlet } from 'react-router-dom'
-
-
+import { Footer } from '@/widgets/Footer/Footer';
+import { Header } from '@/widgets/Header/Header';
+import { Outlet } from 'react-router-dom';
 
 export const MainLayout = () => {
   return (
@@ -13,5 +11,5 @@ export const MainLayout = () => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
