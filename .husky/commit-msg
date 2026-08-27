@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Включаем цвета
+export FORCE_COLOR=1
+
+echo ''
+echo '📝 Проверяю сообщение коммита...'
+
+# Проверяем сообщение через commitlint
+if npx --no-install commitlint --edit "$1"; then
+  echo '✅ Сообщение коммита корректно!'
+  echo ''
+else
+  echo '💀❌ Ошибка в сообщении коммита!'
+  echo '📖 Формат: тип: описание (например, feat: добавить страницу)'
+  echo '📖 Типы: feat, fix, docs, style, refactor, test, chore'
+  echo '📖 Описание: только маленькие буквы, можно по-русски'
+  echo ''
+  exit 1
+fi

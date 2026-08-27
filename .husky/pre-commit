@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Включаем цвета
+export FORCE_COLOR=1
+
+echo ''
+echo '🔍🎨 Проверяю код перед коммитом...'
+
+# Запускаем lint-staged
+if npx lint-staged; then
+  echo '✅ Код отформатирован и проверен!'
+  echo ''
+else
+  echo '💀❌ Ошибка при проверке кода! Исправьте ошибки и попробуйте снова.'
+  echo ''
+  exit 1
+fi
