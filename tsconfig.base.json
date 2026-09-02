@@ -21,6 +21,13 @@
     "paths": {
       "@/*": ["./packages/*/src"],
       "@shared/*": ["./shared/*"]
-    }
+    },
+    "include": [
+      "packages/**/*",
+      "shared/**/*",
+      ".storybook/**/*",
+      "src/**/*",
+      "globals.d.ts"  
+    ]
   }
 }

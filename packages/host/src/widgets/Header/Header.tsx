@@ -1,66 +1,24 @@
 import { Link } from 'react-router-dom';
 
+import styles from './Header.module.css';
+
 export const Header = () => {
   return (
-    <header
-      style={{
-        padding: '20px',
-        background: '#333',
-        color: 'white',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
-      <div style={{ fontSize: '24px', fontWeight: 'bold' }}>
-        <Link
-          to="/"
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          YeahHub
-        </Link>
+    <header className={styles.header}>  
+      <div className={styles.logo}>
+        <Link to="/">YeahHub</Link>
       </div>
 
-      <nav style={{ display: 'flex', gap: '20px' }}>
-        <Link
-          to="/"
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          Главная
-        </Link>
-        <Link
-          to="/questions"
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          Вопросы
-        </Link>
-        <Link
-          to="/trainer"
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          Тренажер
-        </Link>
-        <Link
-          to="/admin"
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          Админка
-        </Link>
-        <Link
-          to="/profile"
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          Профиль
-        </Link>
+      <nav className={styles.nav}>
+        <Link to="/" className={styles.link}>Главная</Link>
+        <Link to="/questions" className={styles.link}>Вопросы</Link>
+        <Link to="/trainer" className={styles.link}>Тренажер</Link>
+        <Link to="/admin" className={styles.link}>Админка</Link>
+        <Link to="/profile" className={styles.link}>Профиль</Link>
       </nav>
 
-      <div>
-        <Link
-          to="/auth"
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          Войти
-        </Link>
+      <div className={styles.auth}>
+        <Link to="/auth" className={styles.link}>Войти</Link>
       </div>
     </header>
   );
